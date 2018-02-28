@@ -1,17 +1,30 @@
 import React from 'react';
 import {BASE_URL,REQUEST_SIGNUP} from '../Helper/Urls'
 import { Root } from '../Helper/router';
+import {Container,
+    Header,
+    Title,
+    Content,
+    Button,
+    Item,
+    Label,
+    Input,
+    Body,
+    Left,
+    Right,
+    Icon,
+    Form} from 'native-base';
 
 
 import { TextInput, ActivityIndicator, ScrollView, StyleSheet, Text, View ,Image, TouchableHighlight, KeyboardAvoidingView } from 'react-native';
 import { StackNavigator, } from 'react-navigation';
-var FloatingLabel = require('react-native-floating-labels');
+// var FloatingLabel = require('react-native-floating-labels');
 // import {create} from 'apisauce';
 import {create} from 'apisauce';
 
 import Toast from 'native-base';
 
-class SignUp extends Component{
+class SignUp extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -120,6 +133,9 @@ class SignUp extends Component{
 
     render() {
         return(
+            <Container style={styles.container}>
+            <Header/>
+            <Content>
             <View style={styles.container}>
                 {/* <ScrollView contentContainerStyle={styles.container}
                         showsVerticalScrollIndicator = {true}
@@ -140,44 +156,68 @@ class SignUp extends Component{
                         <View style={styles.container_element}>
                             {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_account_circle_accent_500_24dp.png')} 
                                     style={styles.img_icon}/> */}
-                            <TextInput
+                            {/* <TextInput
                                 style={styles.text_input}
                                 placeholder="Company Name"
                                 onChangeText={(company_name) => this.setState({company_name})}
                                 placeholderTextColor='#654236'
-                                /> 
+                                />  */}
+                                <Form>
+                                    <Item floatingLabel>
+                                    <Label>Username</Label>
+                                    <Input />
+                                    </Item>
+                                </Form>
                         </View>
                         <View style={styles.container_element}>
                             {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_phone_black_24dp.png')} 
                                     style={styles.img_icon}/> */}
-                            <TextInput
+                            {/* <TextInput
                                 style={styles.text_input}
                                 placeholder="Mobile"
                                 onChangeText={(mobile) => this.setState({mobile})}
                                 keyboardType='numeric'
                                 maxLength={10}
                                 placeholderTextColor='#654236'
-                                /> 
+                                />  */}
+                                <Form>
+                                    <Item floatingLabel>
+                                    <Label>Username</Label>
+                                    <Input />
+                                    </Item>
+                                </Form>
                         </View>
                         <View style={styles.container_element}>
                             {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_lock_outline_accent_24dp.png')} 
                                     style={styles.img_icon}/> */}
-                            <TextInput
+                            {/* <TextInput
                                 style={styles.text_input}
                                 placeholder="Password"
                                 onChangeText={(password) => this.setState({password})}                            
                                 placeholderTextColor='#654236'
-                                /> 
+                                />  */}
+                                <Form>
+                                    <Item floatingLabel>
+                                    <Label>Username</Label>
+                                    <Input />
+                                    </Item>
+                                </Form>
                         </View>
                         <View style={{ flexDirection: 'row',paddingBottom : 6,alignItems: 'center',}}>
                             {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_lock_outline_accent_24dp.png')} 
                                     style={styles.img_icon}/> */}
-                            <TextInput
+                            {/* <TextInput
                                 style={styles.text_input}
                                 placeholder="Confirm Password"
                                 onChangeText={(confirm_password) => this.setState({confirm_password})}                            
                                 placeholderTextColor='#654236'
-                                /> 
+                                />  */}
+                                <Form>
+                                    <Item floatingLabel>
+                                    <Label>Username</Label>
+                                    <Input />
+                                    </Item>
+                                </Form>
                         </View>
                         <View style={styles.signup_button}>
                             <Button 
@@ -202,15 +242,15 @@ class SignUp extends Component{
                     </KeyboardAvoidingView>    
                 {/* </ScrollView> */}
             </View>
+                </Content>
+                </Container>
         );
     }
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         backgroundColor: '#FFF07C',
-        alignItems: 'center',
             
     },
     container_centre:{

@@ -2,14 +2,16 @@ import React from 'react';
 import {BASE_URL,REQUEST_SIGNUP} from '../Helper/Urls'
 import { Root } from '../Helper/router';
 
+
 import { TextInput, ActivityIndicator, ScrollView, StyleSheet, Text, View ,Image, TouchableHighlight, KeyboardAvoidingView } from 'react-native';
 import { StackNavigator, } from 'react-navigation';
 var FloatingLabel = require('react-native-floating-labels');
 // import {create} from 'apisauce';
+import {create} from 'apisauce';
 
 import Toast from 'native-base';
 
-class SignUp extends React.Component{
+class SignUp extends Component{
     constructor(props){
         super(props);
         this.state = {

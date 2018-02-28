@@ -222,15 +222,15 @@ const styles = StyleSheet.create({
          paddingBottom : 12,
          alignItems: 'center',
     },
-    img_logo : {
-        height:100,
-        width: 100,
-    },
-    img_icon:{ 
-        height: 25,
-        width: 25,
-        marginRight:8,
-    },
+    // img_logo : {
+    //     height:100,
+    //     width: 100,
+    // },
+    // img_icon:{ 
+    //     height: 25,
+    //     width: 25,
+    //     marginRight:8,
+    // },
     text_input:{
         height:50,
         width: 250,

@@ -1,19 +1,19 @@
 import React from 'react';
 import { TabNavigator, StackNavigator, DrawerNavigator } from 'react-navigation';
 
-import Login from '../screens/Login'
+// import Login from '../screens/Login'
 import SignUp from '../screens/SignUp'
 
 
 
 export const Root = StackNavigator({
     
-    Login: {
-        screen: Login,
-        navigationOptions: {
-            header: null,
-        }
-    },
+    // Login: {
+    //     screen: Login,
+    //     navigationOptions: {
+    //         header: null,
+    //     }
+    // },
     SignUp: {
         screen: SignUp,
         navigationOptions: {

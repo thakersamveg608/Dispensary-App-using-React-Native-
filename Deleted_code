@@ -1,0 +1,106 @@
+<View style={styles.container}>
+                {/* <ScrollView contentContainerStyle={styles.container}
+                        showsVerticalScrollIndicator = {true}
+                        keyboardShouldPersistTaps = 'never'
+                        > */}
+                <KeyboardAvoidingView
+                style={styles.container}
+                behavior="padding"
+                >
+                    <View style={{marginTop: 40, }}>
+                        {/* <Image source={require('../src/main/res/drawable-xxxhdpi/logooo.png')} 
+                                    style={styles.img_logo}
+                                    width={130}
+                                    height={100}
+                                /> */}
+                    </View>
+                    <View style={{marginTop:35}}>
+                        <View style={styles.container_element}>
+                            {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_account_circle_accent_500_24dp.png')} 
+                                    style={styles.img_icon}/> */}
+                            {/* <TextInput
+                                style={styles.text_input}
+                                placeholder="Company Name"
+                                onChangeText={(company_name) => this.setState({company_name})}
+                                placeholderTextColor='#654236'
+                                />  */}
+                                <Form>
+                                    <Item floatingLabel>
+                                    <Label>Username</Label>
+                                    <Input />
+                                    </Item>
+                                </Form>
+                        </View>
+                        <View style={styles.container_element}>
+                            {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_phone_black_24dp.png')} 
+                                    style={styles.img_icon}/> */}
+                            {/* <TextInput
+                                style={styles.text_input}
+                                placeholder="Mobile"
+                                onChangeText={(mobile) => this.setState({mobile})}
+                                keyboardType='numeric'
+                                maxLength={10}
+                                placeholderTextColor='#654236'
+                                />  */}
+                                <Form>
+                                    <Item floatingLabel>
+                                    <Label>Username</Label>
+                                    <Input />
+                                    </Item>
+                                </Form>
+                        </View>
+                        <View style={styles.container_element}>
+                            {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_lock_outline_accent_24dp.png')} 
+                                    style={styles.img_icon}/> */}
+                            {/* <TextInput
+                                style={styles.text_input}
+                                placeholder="Password"
+                                onChangeText={(password) => this.setState({password})}                            
+                                placeholderTextColor='#654236'
+                                />  */}
+                                <Form>
+                                    <Item floatingLabel>
+                                    <Label>Username</Label>
+                                    <Input />
+                                    </Item>
+                                </Form>
+                        </View>
+                        <View style={{ flexDirection: 'row',paddingBottom : 6,alignItems: 'center',}}>
+                            {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_lock_outline_accent_24dp.png')} 
+                                    style={styles.img_icon}/> */}
+                            {/* <TextInput
+                                style={styles.text_input}
+                                placeholder="Confirm Password"
+                                onChangeText={(confirm_password) => this.setState({confirm_password})}                            
+                                placeholderTextColor='#654236'
+                                />  */}
+                                <Form>
+                                    <Item floatingLabel>
+                                    <Label>Username</Label>
+                                    <Input />
+                                    </Item>
+                                </Form>
+                        </View>
+                        <View style={styles.signup_button}>
+                            <Button 
+                                text='SIGN UP'
+                                onPress = {() => {this.onValidation(); }}
+                                styleSheet= {styles.buttonTextSignUp}                         
+                                />
+                            <Text>Toast</Text>
+                        </View>
+                        <View style={styles.container_centre}>
+                            <Text 
+                                style={{
+                                    color: '#000000',
+                                    fontSize : 15,
+                                }} 
+                                onPress = {() => {this.onLogin(); }}
+                                >
+                                Already have an account ? Login
+                                </Text>
+                        </View>
+                    </View>
+                    </KeyboardAvoidingView>    
+                {/* </ScrollView> */}
+            </View>

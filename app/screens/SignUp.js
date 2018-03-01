@@ -13,16 +13,15 @@ import {Container,
     Left,
     Right,
     Icon,
-    Form} from 'native-base';
+    Form,
+    Toast,
+    Text} from 'native-base';
+import * as colors from '../values/colors';
 
-
-import { TextInput, ActivityIndicator, ScrollView, StyleSheet, Text, View ,Image, TouchableHighlight, KeyboardAvoidingView } from 'react-native';
-import { StackNavigator, } from 'react-navigation';
-// var FloatingLabel = require('react-native-floating-labels');
-// import {create} from 'apisauce';
+import { KeyboardAvoidingView,StyleSheet } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 import {create} from 'apisauce';
-
-import Toast from 'native-base';
+import styles from './Styles';
 
 class SignUp extends React.Component{
     constructor(props){
@@ -134,162 +133,12 @@ class SignUp extends React.Component{
     render() {
         return(
             <Container style={styles.container}>
-            <Header/>
-            <Content>
-            <View style={styles.container}>
-                {/* <ScrollView contentContainerStyle={styles.container}
-                        showsVerticalScrollIndicator = {true}
-                        keyboardShouldPersistTaps = 'never'
-                        > */}
-                <KeyboardAvoidingView
-                style={styles.container}
-                behavior="padding"
-                >
-                    <View style={{marginTop: 40, }}>
-                        {/* <Image source={require('../src/main/res/drawable-xxxhdpi/logooo.png')} 
-                                    style={styles.img_logo}
-                                    width={130}
-                                    height={100}
-                                /> */}
-                    </View>
-                    <View style={{marginTop:35}}>
-                        <View style={styles.container_element}>
-                            {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_account_circle_accent_500_24dp.png')} 
-                                    style={styles.img_icon}/> */}
-                            {/* <TextInput
-                                style={styles.text_input}
-                                placeholder="Company Name"
-                                onChangeText={(company_name) => this.setState({company_name})}
-                                placeholderTextColor='#654236'
-                                />  */}
-                                <Form>
-                                    <Item floatingLabel>
-                                    <Label>Username</Label>
-                                    <Input />
-                                    </Item>
-                                </Form>
-                        </View>
-                        <View style={styles.container_element}>
-                            {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_phone_black_24dp.png')} 
-                                    style={styles.img_icon}/> */}
-                            {/* <TextInput
-                                style={styles.text_input}
-                                placeholder="Mobile"
-                                onChangeText={(mobile) => this.setState({mobile})}
-                                keyboardType='numeric'
-                                maxLength={10}
-                                placeholderTextColor='#654236'
-                                />  */}
-                                <Form>
-                                    <Item floatingLabel>
-                                    <Label>Username</Label>
-                                    <Input />
-                                    </Item>
-                                </Form>
-                        </View>
-                        <View style={styles.container_element}>
-                            {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_lock_outline_accent_24dp.png')} 
-                                    style={styles.img_icon}/> */}
-                            {/* <TextInput
-                                style={styles.text_input}
-                                placeholder="Password"
-                                onChangeText={(password) => this.setState({password})}                            
-                                placeholderTextColor='#654236'
-                                />  */}
-                                <Form>
-                                    <Item floatingLabel>
-                                    <Label>Username</Label>
-                                    <Input />
-                                    </Item>
-                                </Form>
-                        </View>
-                        <View style={{ flexDirection: 'row',paddingBottom : 6,alignItems: 'center',}}>
-                            {/* <Image source={require('../src/main/res/drawable-xxxhdpi/ic_lock_outline_accent_24dp.png')} 
-                                    style={styles.img_icon}/> */}
-                            {/* <TextInput
-                                style={styles.text_input}
-                                placeholder="Confirm Password"
-                                onChangeText={(confirm_password) => this.setState({confirm_password})}                            
-                                placeholderTextColor='#654236'
-                                />  */}
-                                <Form>
-                                    <Item floatingLabel>
-                                    <Label>Username</Label>
-                                    <Input />
-                                    </Item>
-                                </Form>
-                        </View>
-                        <View style={styles.signup_button}>
-                            <Button 
-                                text='SIGN UP'
-                                onPress = {() => {this.onValidation(); }}
-                                styleSheet= {styles.buttonTextSignUp}                         
-                                />
-                            <Text>Toast</Text>
-                        </View>
-                        <View style={styles.container_centre}>
-                            <Text 
-                                style={{
-                                    color: '#000000',
-                                    fontSize : 15,
-                                }} 
-                                onPress = {() => {this.onLogin(); }}
-                                >
-                                Already have an account ? Login
-                                </Text>
-                        </View>
-                    </View>
-                    </KeyboardAvoidingView>    
-                {/* </ScrollView> */}
-            </View>
+                <Content>
+                    <Text
+                    style = {{textAlign:'center',fontSize:40,color:'white',marginTop:50}}>Sign Up</Text>
                 </Content>
-                </Container>
+            </Container>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#FFF07C',
-            
-    },
-    container_centre:{
-        alignItems: 'center',  
-        marginTop: 15,
-    },
-    container_element:{
-         flexDirection: 'row',
-         paddingBottom : 12,
-         alignItems: 'center',
-    },
-    // img_logo : {
-    //     height:100,
-    //     width: 100,
-    // },
-    // img_icon:{ 
-    //     height: 25,
-    //     width: 25,
-    //     marginRight:8,
-    // },
-    text_input:{
-        height:50,
-        width: 250,
-        marginLeft:8,
-        fontSize: 18,
-    },
-    signup_button: {
-        marginTop : 25,
-    },    
-    button:{
-        backgroundColor: '#654236',
-        borderWidth :0,
-        borderRadius :5,
-        padding : 8,
-        alignItems:'center',
-    },
-    buttonTextSignUp:{
-        fontSize:25,
-        color : 'white',
-    },  
-});
 export default SignUp;

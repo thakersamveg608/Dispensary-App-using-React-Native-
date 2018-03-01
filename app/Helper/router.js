@@ -16,9 +16,9 @@ export const Root = StackNavigator({
     // },
     SignUp: {
         screen: SignUp,
-        // navigationOptions: {
-        //     header: null,
-        // }
+        navigationOptions: {
+            header: null,
+        }
     },
     // Otp: {
     //     screen: Otp,

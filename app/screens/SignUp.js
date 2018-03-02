@@ -21,6 +21,7 @@ import * as colors from '../values/colors';
 import { KeyboardAvoidingView,StyleSheet } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import {create} from 'apisauce';
+import { Grid, Col } from "react-native-easy-grid";
 import styles from './Styles';
 
 class SignUp extends React.Component{
@@ -136,6 +137,18 @@ class SignUp extends React.Component{
                 <Content>
                     <Text
                     style = {{textAlign:'center',fontSize:40,color:'white',marginTop:50}}>Sign Up</Text>
+                    <Left>
+                    <Icon
+              name="logo-apple"
+              style={{ width: 45, height: 45 }}
+            />
+                    </Left>
+                    <Body>
+                        <Item floatingLabel>
+                        <Label>Username</Label>
+                        <Input />
+                        </Item>
+                    </Body>
                 </Content>
             </Container>
         );

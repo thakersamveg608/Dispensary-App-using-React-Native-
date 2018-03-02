@@ -3,6 +3,7 @@ import {BASE_URL,REQUEST_SIGNUP} from '../Helper/Urls'
 import { Root } from '../Helper/router';
 import {Container,
     Header,
+    Thumbnail,
     Title,
     Content,
     Button,
@@ -18,10 +19,12 @@ import {Container,
     Text} from 'native-base';
 import * as colors from '../values/colors';
 
+const user_logo = require("/home/samveg/ReactNativeApps/Dispensary/android/app/src/main/res/drawable/user.png");
+
 import { KeyboardAvoidingView,StyleSheet } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import {create} from 'apisauce';
-import { Grid, Col } from "react-native-easy-grid";
+import { Grid, Col, Row } from "react-native-easy-grid";
 import styles from './Styles';
 
 class SignUp extends React.Component{
@@ -137,18 +140,18 @@ class SignUp extends React.Component{
                 <Content>
                     <Text
                     style = {{textAlign:'center',fontSize:40,color:'white',marginTop:50}}>Sign Up</Text>
-                    <Left>
-                    <Icon
-              name="logo-apple"
-              style={{ width: 45, height: 45 }}
-            />
-                    </Left>
-                    <Body>
-                        <Item floatingLabel>
-                        <Label>Username</Label>
-                        <Input />
-                        </Item>
-                    </Body>
+                    <Grid>
+                        <Row style={{height:100,marginTop:20}}>
+                            <Col size={1} >
+                            <Thumbnail Circular source={user_logo} style={{width:32,height:32,marginTop:30,marginLeft:100}} />
+                            </Col>
+                            <Col size={2} >
+                            <Item floatingLabel style={{marginTop:10,size:50}}>
+                            <Label>Full Name</Label>
+                            </Item>
+                            </Col>
+                        </Row>    
+                    </Grid>
                 </Content>
             </Container>
         );
